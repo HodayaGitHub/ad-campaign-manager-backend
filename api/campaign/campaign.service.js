@@ -10,7 +10,21 @@ export const campaignService = {
     remove,
     add,
     update,
+    query,
 }
+
+async function query() {
+    try {
+        const collection = await dbService.getCollection('campaign');
+        const campaigns = await collection.find({}).toArray();
+        return campaigns;
+
+    } catch (err) {
+        logger.error('cannot find campaigns', err);
+        throw err;
+    }
+}
+
 
 async function getById(campaignId) {
     try {

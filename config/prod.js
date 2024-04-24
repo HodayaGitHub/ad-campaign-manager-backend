@@ -3,5 +3,5 @@ dotenv.config();
 
 export default {
     dbURL:  process.env.DB_URL,
-    dbName: 'ad-campaign',
+    dbName: 'campaign_db',
 }

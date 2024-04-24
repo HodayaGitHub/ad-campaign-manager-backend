@@ -4,17 +4,12 @@ import { logger } from "../../services/logger.service.js"
 
 export async function getCampaigns(req, res) {
     try {
-        console.log(req.query)
-        const { filterBy, sortBy } = req.query
-
-        // logger.debug('Getting Campaigns', filterBy)
-        const campaigns = await campaignService.query(filterBy, sortBy)
-
-        res.json(campaigns)
+        const campaigns = await campaignService.query();
+        res.json(campaigns);
 
     } catch (err) {
-        logger.error('Cannot get campaigns', err)
-        res.status(500).send({ err: 'Failed to get campaign' })
+        logger.error('Cannot get campaigns', err);
+        res.status(500).send({ err: 'Failed to get campaign' });
     }
 }
 
