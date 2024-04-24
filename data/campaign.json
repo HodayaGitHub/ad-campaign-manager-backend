@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Spring Sale 2024",
+      "advertisingPlatform": "Google",
+      "advertiserLandingPage": "https://www.example.com/spring-sale",
+      "bannerImageURL": "https://www.example.com/images/spring-sale-banner.jpg"
+    },
+    {
+      "name": "Summer Promo",
+      "advertisingPlatform": "Taboola",
+      "advertiserLandingPage": "https://www.example.com/promo-page",
+      "bannerImageURL": "https://www.example.com/images/summer-promo-banner.png"
+    }
+  ]

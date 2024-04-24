@@ -1,0 +1,6 @@
+node_modules
+.vscode/settings.json
+logs/backend.log
+logs/backend.log
+logs/backend.log
+.env
