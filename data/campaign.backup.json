@@ -1,14 +1,27 @@
-[
-    {
-      "name": "Spring Sale 2024",
-      "advertisingPlatform": "Google",
-      "advertiserLandingPage": "https://www.example.com/spring-sale",
-      "bannerImageURL": "https://www.example.com/images/spring-sale-banner.jpg"
-    },
-    {
-      "name": "Summer Promo",
-      "advertisingPlatform": "Taboola",
-      "advertiserLandingPage": "https://www.example.com/promo-page",
-      "bannerImageURL": "https://www.example.com/images/summer-promo-banner.png"
-    }
-  ]
+[{
+  "_id": {
+    "$oid": "6628ea583273ba89f81dd2f1"
+  },
+  "name": "Spring Sale 2024",
+  "advertisingPlatform": "Google",
+  "advertiserLandingPage": "https://www.example.com/spring-sale",
+  "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/b4dfzc2nljz3xoqq4zik.jpg"
+},
+{
+  "_id": {
+    "$oid": "6628f410617a28e26256b316"
+  },
+  "name": "Summer Promo",
+  "advertisingPlatform": "Taboola",
+  "advertiserLandingPage": "https://www.example.com/promo-page",
+  "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960621/campaignManager/bdls6spfl24wcdvz7zaj.png"
+},
+{
+  "_id": {
+    "$oid": "6628f66f617a28e26256b318"
+  },
+  "name": "Summer Promo",
+  "advertisingPlatform": "Taboola",
+  "advertiserLandingPage": "https://www.example.com/promo-page",
+  "bannerImageURL": ""
+}]

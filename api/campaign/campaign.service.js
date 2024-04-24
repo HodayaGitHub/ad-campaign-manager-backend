@@ -42,17 +42,18 @@ async function remove(campaignId) {
         const collection = await dbService.getCollection('campaign')
         await collection.deleteOne({ _id: new ObjectId(campaignId) })
     } catch (err) {
-        logger.error(`cannot remove car ${campaignId}`, err)
+        logger.error(`cannot remove campaign ${campaignId}`, err)
         throw err
     }
 }
 
 async function update(campaign) {
     try {
-        console.log('campaign to remove', campaign)
         const campaignToSave = {
             name: campaign.name,
-            price: campaign.price,
+            advertisingPlatform: campaign.advertisingPlatform,
+            advertiserLandingPage: campaign.advertiserLandingPage,
+            bannerImageURL: campaign.bannerImageURL,
         }
         const collection = await dbService.getCollection('campaign')
         await collection.updateOne(
@@ -71,7 +72,7 @@ async function add(campaign) {
         await collection.insertOne(campaign)
         return campaign
     } catch (err) {
-        logger.error('cannot insert car', err)
+        logger.error('cannot insert campaign', err)
         throw err
     }
 }
