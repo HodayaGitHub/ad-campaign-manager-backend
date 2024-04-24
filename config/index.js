@@ -1,11 +1,11 @@
-import configProd from './prod.js'
-import configDev from './dev.js'
+import configProd from './prod.js';
+import configDev from './dev.js';
 
-export var config
+export var config;
 
 if (process.env.NODE_ENV === 'production') {
-    config = configProd
+    config = configProd;
 } else {
-    config = configDev
+    config = configDev;
 }
-config.isGuestMode = true
+config.isGuestMode = true;

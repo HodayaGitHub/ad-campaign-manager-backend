@@ -1,48 +1,47 @@
-import http from 'http'
-import express from 'express'
-import cookieParser from 'cookie-parser'
-import cors from 'cors'
+import http from 'http';
+import express from 'express';
+import cookieParser from 'cookie-parser';
+import cors from 'cors';
 
-import path, { dirname } from 'path'
-import { fileURLToPath } from 'url'
+import path, { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
-import { logger } from './services/logger.service.js'
+import { logger } from './services/logger.service.js';
 
-const app = express()
-const server = http.createServer(app)
+const app = express();
+const server = http.createServer(app);
 
 
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.resolve(__dirname, 'public')))
-    console.log('__dirname: ', __dirname)
+    app.use(express.static(path.resolve(__dirname, 'public')));
+    console.log('__dirname: ', __dirname);
 } else {
     const corsOptions = {
         origin: ['http://127.0.0.1:5173', 'http://localhost:5173', 'http://localhost:27017'],
         credentials: true
-    }
-    app.use(cors(corsOptions))
+    };
+    app.use(cors(corsOptions));
 }
 
 
 // Express App Config
-app.use(express.static('public'))
-app.use(cookieParser())
-app.use(express.json())
+app.use(express.static('public'));
+app.use(cookieParser());
+app.use(express.json());
 
 
-import { campaignRoutes } from './api/campaign/campaign.routes.js'
-app.use('/api/campaign', campaignRoutes)
+import { campaignRoutes } from './api/campaign/campaign.routes.js';
+app.use('/api/campaign', campaignRoutes);
 
 app.get('/**', (req, res) => {
-    res.sendFile(path.resolve('public/index.html'))
-})
+    res.sendFile(path.resolve('public/index.html'));
+});
 
 
-const port = process.env.PORT || 3030
+const port = process.env.PORT || 3030;
 server.listen(port, () =>
     logger.info(`Server listening on port http://127.0.0.1:${port}/`)
-)
-
+);
