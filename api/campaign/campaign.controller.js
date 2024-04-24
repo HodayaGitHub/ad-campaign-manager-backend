@@ -40,7 +40,7 @@ export async function updateCampaign(req, res) {
     try {
         const campaign = req.body;
         let updatedCampaign;
-        if (campaign.id) {
+        if (campaign._id) {
             // Update existing campaign
             updatedCampaign = await campaignService.update(campaign);
         } else {
