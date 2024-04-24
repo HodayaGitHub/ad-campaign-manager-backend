@@ -1,5 +1,5 @@
-import { campaignService } from "./campaign.service.js"
-import { logger } from "../../services/logger.service.js"
+import { campaignService } from './campaign.service.js';
+import { logger } from '../../services/logger.service.js';
 
 
 export async function getCampaigns(req, res) {
@@ -38,13 +38,20 @@ export async function removeCampaign(req, res) {
 
 export async function updateCampaign(req, res) {
     try {
-        const campaign = req.body
-        console.log(campaign)
-        const updatedCampaign = await campaignService.update(campaign)
-        res.json(updatedCampaign)
+        const campaign = req.body;
+        let updatedCampaign;
+        if (campaign.id) {
+            // Update existing campaign
+            updatedCampaign = await campaignService.update(campaign);
+        } else {
+            // Add new campaign
+            updatedCampaign = await campaignService.add(campaign);
+        }
+
+        res.json(updatedCampaign);
     } catch (err) {
-        logger.error('Failed to update campaign', err)
-        res.status(500).send({ err: 'Failed to update campaign' })
+        logger.error('Failed to update campaign', err);
+        res.status(500).send({ err: 'Failed to update campaign' });
     }
 }
 
