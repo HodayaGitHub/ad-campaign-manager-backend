@@ -1,5 +1,3 @@
-import fs from 'fs';
-
 import { ObjectId } from 'mongodb';
 import { dbService } from '../../services/db.service.js';
 import { logger } from '../../services/logger.service.js';
@@ -21,7 +19,7 @@ async function query(filterBy) {
         }
 
         if (filterBy?.platform?.length > 0) {
-            criteria.platform = { $in: filterBy.platform }
+            criteria.advertisingPlatform = { $in: filterBy.platform }
         }
         const collection = await dbService.getCollection('campaign');
         const campaigns = await collection.find(criteria).toArray();
