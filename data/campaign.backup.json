@@ -15,66 +15,66 @@
     "name": "Summer Promo",
     "advertisingPlatform": "Taboola",
     "advertiserLandingPage": "https://www.example.com/promo-page",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/l5ddbfio74iayippm6fw.jpg"
   },
   {
     "name": "Spring Sale",
     "advertisingPlatform": "Google",
     "advertiserLandingPage": "https://www.example.com/spring-sale",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/q6zfpjjeezq3jcqghqsg.jpg"
   },
   {
     "name": "Spring Sale",
     "advertisingPlatform": "Google",
     "advertiserLandingPage": "https://www.example.com/spring-sale",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/gelwakggy6dy4eppuzu3.jpg"
   },
   {
     "name": "Summer Savings",
     "advertisingPlatform": "Taboola",
     "advertiserLandingPage": "https://www.example.com/summer-savings",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/dsjj5g4ap5sbtjlx3xgl.jpg"
   },
   {
     "name": "Back-to-School Deals",
     "advertisingPlatform": "Google",
     "advertiserLandingPage": "https://www.example.com/back-to-school-deals",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/y8zemuhv3sriqz1dzr9x.jpg"
   },
   {
     "name": "Autumn Promo",
     "advertisingPlatform": "TikTok",
     "advertiserLandingPage": "https://www.example.com/autumn-promo",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/bmfvprhne05slp8uveef.jpg"
   },
   {
     "name": "End-of-Year Clearance",
     "advertisingPlatform": "Taboola",
     "advertiserLandingPage": "https://www.example.com/clearance",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/q8r6s33mjea4pckdsrgu.jpg"
   },
   {
     "name": "Winter Sale",
     "advertisingPlatform": "Google",
     "advertiserLandingPage": "https://www.example.com/winter-sale",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/ivlbeoz5ddobwoy3bpqb.jpg"
   },
   {
     "name": "New Year New You",
     "advertisingPlatform": "TikTok",
     "advertiserLandingPage": "https://www.example.com/new-year",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/peanzacrlniwfprbg0e0.jpg"
   },
   {
     "name": "Springtime Specials",
     "advertisingPlatform": "Taboola",
     "advertiserLandingPage": "https://www.example.com/spring-specials",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/ga5yf68flcvgiohkmhbc.jpg"
   },
   {
     "name": "Summer Clearance",
     "advertisingPlatform": "Google",
     "advertiserLandingPage": "https://www.example.com/summer-clearance",
-    "bannerImageURL": ""
+    "bannerImageURL": "https://res.cloudinary.com/drlt4yjnj/image/upload/v1713960251/campaignManager/b4dfzc2nljz3xoqq4zik.jpg"
   }
 ]

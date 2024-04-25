@@ -54,14 +54,6 @@ async function remove(campaignId) {
 
 async function update(campaign) {
     try {
-        // Validate campaign object
-        if (!campaign || !campaign._id) {
-            throw new Error('Invalid campaign object');
-        }
-        if (!campaign.name || !campaign.advertisingPlatform || !campaign.advertiserLandingPage || !campaign.bannerImageURL) {
-            throw new Error('Campaign fields are required');
-        }
-
         const campaignToSave = {
             name: campaign.name,
             advertisingPlatform: campaign.advertisingPlatform,
@@ -82,7 +74,7 @@ async function update(campaign) {
 async function add(campaign) {
     try {
         // Validate campaign object
-        if (!campaign || !campaign.name || !campaign.advertisingPlatform || !campaign.advertiserLandingPage || !campaign.bannerImageURL) {
+        if (!campaign || !campaign.name || !campaign.advertisingPlatform || !campaign.advertiserLandingPage) {
             throw new Error('Campaign fields are required');
         }
         const collection = await dbService.getCollection('campaign');
