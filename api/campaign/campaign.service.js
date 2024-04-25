@@ -31,7 +31,6 @@ async function query(filterBy) {
     }
 }
 
-
 async function getById(campaignId) {
     try {
         const collection = await dbService.getCollection('campaign');
@@ -53,10 +52,16 @@ async function remove(campaignId) {
     }
 }
 
-
-// TODO - add validation to the recived  data 
 async function update(campaign) {
     try {
+        // Validate campaign object
+        if (!campaign || !campaign._id) {
+            throw new Error('Invalid campaign object');
+        }
+        if (!campaign.name || !campaign.advertisingPlatform || !campaign.advertiserLandingPage || !campaign.bannerImageURL) {
+            throw new Error('Campaign fields are required');
+        }
+
         const campaignToSave = {
             name: campaign.name,
             advertisingPlatform: campaign.advertisingPlatform,
@@ -74,9 +79,12 @@ async function update(campaign) {
     }
 }
 
-// TODO - add validation to the recived  data 
 async function add(campaign) {
     try {
+        // Validate campaign object
+        if (!campaign || !campaign.name || !campaign.advertisingPlatform || !campaign.advertiserLandingPage || !campaign.bannerImageURL) {
+            throw new Error('Campaign fields are required');
+        }
         const collection = await dbService.getCollection('campaign');
         await collection.insertOne(campaign);
         return campaign;
