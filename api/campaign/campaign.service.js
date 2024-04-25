@@ -47,6 +47,8 @@ async function remove(campaignId) {
     }
 }
 
+
+// TODO - add validation to the recived  data 
 async function update(campaign) {
     try {
         const campaignToSave = {
@@ -66,6 +68,7 @@ async function update(campaign) {
     }
 }
 
+// TODO - add validation to the recived  data 
 async function add(campaign) {
     try {
         const collection = await dbService.getCollection('campaign');
