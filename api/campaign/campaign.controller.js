@@ -4,7 +4,8 @@ import { logger } from '../../services/logger.service.js';
 
 export async function getCampaigns(req, res) {
     try {
-        const campaigns = await campaignService.query();
+        const { filterBy } = req.query
+        const campaigns = await campaignService.query(filterBy);
         res.json(campaigns);
 
     } catch (err) {

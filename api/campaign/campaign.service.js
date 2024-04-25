@@ -13,10 +13,18 @@ export const campaignService = {
     query,
 };
 
-async function query() {
+async function query(filterBy) {
     try {
+        const criteria = {}
+        if (filterBy?.txt) {
+            criteria.name = { $regex: filterBy.txt, $options: 'i' }
+        }
+
+        if (filterBy?.platform?.length > 0) {
+            criteria.platform = { $in: filterBy.platform }
+        }
         const collection = await dbService.getCollection('campaign');
-        const campaigns = await collection.find({}).toArray();
+        const campaigns = await collection.find(criteria).toArray();
         return campaigns;
 
     } catch (err) {
